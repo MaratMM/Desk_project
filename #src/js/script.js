@@ -1,3 +1,4 @@
+//необходимая часть , не удалять!!!!!!!!!!
 @@include('alert.js');
 
 function testWebP(callback) {
@@ -18,3 +19,4 @@ function testWebP(callback) {
     }
     });
 
+//основной скрипт

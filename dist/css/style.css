@@ -22,34 +22,75 @@
   font-style: normal;
 }
 
-body {
-  font-size: 16px;
-  background-color: #565656;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header {
+  position: fixed;
 }
 
-span {
-  font-size: 20px;
+.header li {
+  list-style: none;
 }
 
-div {
-  font-size: 30px;
+.header .header_logo {
+  margin: 5px;
+  height: 75px;
 }
 
-div {
-  background: url("../img/1610104876604.jpg") 0 0 no-repeat;
+.header .header_logo img {
+  padding: 10px 0;
 }
 
-@media (max-width: 767px) {
-  span {
-    font-size: 15px;
+@media (max-width: 375px) {
+  .header .div_navigation {
+    width: 100%;
+    background-color: #F8F5EE;
   }
 
-  div {
-    font-size: 20px;
+  .header .div_navigation ul {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .header .top_header {
+    margin: 0 auto;
+    min-height: 80px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #F8F5EE;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .header .top_header_icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 5px;
+    padding: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .header .top_header_icons .top_header_icon {
+    margin: 5px;
+    content: "";
+    width: 40px;
+    height: 40px;
+  }
+
+  .header .top_header_icons .icon_basket {
+    background-image: url("/img/sprite/line.svg");
+    background-repeat: no-repeat;
+    background-position: 7px 5px;
+  }
+
+  .header .top_header_icons .icon_burger {
+    background-image: url("/img/sprite/line.svg");
+    background-repeat: no-repeat;
+    background-position: -135px -138px;
   }
 }
-
-.webp div { background: url(../img/1610104876604.webp) 0 0 no-repeat; }

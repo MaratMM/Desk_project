@@ -1,3 +1,4 @@
+//необходимая часть , не удалять!!!!!!!!!!
 //alert('Hello gulp!');;
 
 function testWebP(callback) {
@@ -18,3 +19,4 @@ function testWebP(callback) {
     }
     });
 
+//основной скрипт

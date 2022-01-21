@@ -1,3 +1,4 @@
+//необходимая часть, не удалять!!!!!!!!!
 @mixin font($font_name, $file_name, $weight, $style) {
 
     @font-face {
@@ -9,31 +10,17 @@
     }
     }
 
-
+//добавляем шрифты
 @import "fonts";
+//вспомогательная функция
+// div {
+//     outline: solid 1px red;
+// }
+// ul, li {
+//     outline: dashed 1px blue;
+// }
 
-body{
-    font-size: 16px;
-    background-color: #565656;
-    display: flex;
-}
+//основная стилизация
 
-span{
-    font-size: 20px;
-    @media (max-width: 767px) {
-        font-size: 15px;
-        
-    }
-}
+@import "header";
 
-div{
-    font-size: 30px;
-    @media (max-width: 767px) {
-        font-size: 20px;
-        
-    }
-}
-
-div {
-    background: url("../img/1610104876604.jpg") 0 0 no-repeat;
-}
