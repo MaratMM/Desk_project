@@ -20,3 +20,5 @@ function testWebP(callback) {
     });
 
 //основной скрипт
+
+@@include('btnCloseMenu.js');
