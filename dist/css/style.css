@@ -94,6 +94,10 @@ li {
   padding: 0 0 0 20px;
 }
 
+.item_navigation:last-child {
+  display: none;
+}
+
 .item_link {
   list-style: none;
   color: black;
@@ -154,9 +158,20 @@ li {
   display: flex;
 }
 
+.social_icons_menu ul .icon_faceBook {
+  background-image: url("/img/Logo/facebook.svg");
+  background-position: -1px 1px;
+}
+
+.social_icons_menu ul .icon_Inst {
+  background-image: url("/img/Logo/instagram.svg");
+  background-position: 3px 3px;
+}
+
 .social_icons_menu ul li {
   margin: 0 10px 0 0;
   content: "";
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   outline: dashed 1px blue;
@@ -171,6 +186,10 @@ li {
     height: 60px;
     position: fixed;
     z-index: 10;
+  }
+
+  .header_logo {
+    padding-top: 5px;
   }
 
   .navigation_list {
@@ -196,11 +215,15 @@ li {
     padding: 10px 0 0 20px;
   }
 
+  .item_navigation:last-child {
+    display: list-item;
+  }
+
   .btn_close_menu {
     display: inline-block;
     position: relative;
-    top: 5px;
-    right: 5px;
+    top: 0px;
+    right: 0px;
     z-index: 15;
   }
 
