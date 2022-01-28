@@ -12,20 +12,25 @@
 
 //добавляем шрифты
 @import "fonts";
-//вспомогательная функция
-// div {
-//     outline: solid 1px red;
-// }
-// ul, li {
-//     outline: dashed 1px blue;
-// }
+
+
+//глобальные настройки
 
 html, body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+//переменные
+$mobile-media-size: 425px;
 
 //основная стилизация
 
 @import "header";
+@import "footer";
 

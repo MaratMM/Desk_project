@@ -1,0 +1,103 @@
+.footer {
+}
+.container {
+}
+.footer_sections {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile-media-size) {
+        flex-direction: column;
+    }
+}
+.footer_input {
+    width: 480px;
+    @media (max-width: $mobile-media-size) {
+        order: 2;
+        width: 100%;
+    }
+}
+
+.button_news {
+    @media (max-width: $mobile-media-size) {
+        width: 100%;
+    }
+}
+.footer_input_news {
+    @media (max-width: $mobile-media-size) {
+        width: 100%;
+    }
+}
+.form_footer {
+    position: relative;
+}
+.footer_input_label::before {
+    // position: absolute;
+    // bottom: 0;
+    content: '';
+    background-position: -142px -93px;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url('/img/sprite/line.svg');
+    width: 30px;
+    height: 30px;
+    outline: dashed 1px blue;
+}
+    
+.div_form {
+    display: flex;
+    @media (max-width: $mobile-media-size) {
+        flex-direction: column;
+    }
+}
+.footer_input_label {
+}
+.under_info {
+}
+.footer_navigatio_list {
+    @media (max-width: $mobile-media-size) {
+        order: 1;
+    }
+}
+.footer_navigation {
+    @media (max-width: $mobile-media-size) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    ul {
+        display: flex;
+        padding: 0;
+        flex-wrap: wrap;
+        @media (max-width: $mobile-media-size) {
+            flex-direction: column;
+        }
+    }
+}
+.foot_nav_item {
+    padding-left: 24px;
+    @media (max-width: $mobile-media-size) {
+        margin-bottom: 12px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+}
+.link_nav {
+}
+.social_icons_menu {
+    ul {
+        @media (max-width: $mobile-media-size) {
+            flex-direction: row;
+        }
+    }
+}
+.icon_faceBook {
+}
+.icon_Inst {
+}
