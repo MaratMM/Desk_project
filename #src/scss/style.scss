@@ -21,9 +21,13 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-    max-width: 1024px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.padding_for_header {
+    padding-top: 60px;
 }
 
 //переменные
@@ -33,4 +37,6 @@ $mobile-media-size: 425px;
 
 @import "header";
 @import "footer";
+
+@import "main_page";
 

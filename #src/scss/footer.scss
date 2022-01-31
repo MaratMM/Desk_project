@@ -1,5 +1,6 @@
 .footer {
 }
+
 .container {
 }
 .footer_sections {
@@ -15,11 +16,21 @@
         order: 2;
         width: 100%;
     }
+    p, span {
+        color: #828282;
+    }
 }
-
+.button {
+    background-color: #2C9A7A;
+    color: #FFFFFF;
+}
 .button_news {
+    height: 56px;
+    margin-left: 8px;
     @media (max-width: $mobile-media-size) {
         width: 100%;
+        margin-left: 0;
+        margin-top: 12px;
     }
 }
 .footer_input_news {
@@ -29,10 +40,21 @@
 }
 .form_footer {
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    input[type="email"] {
+        margin-top: 10px;
+        height: 56px;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
 }
 .footer_input_label::before {
-    // position: absolute;
-    // bottom: 0;
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
     content: '';
     background-position: -142px -93px;
     display: block;
@@ -45,29 +67,30 @@
     
 .div_form {
     display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     @media (max-width: $mobile-media-size) {
         flex-direction: column;
+        align-items: stretch;
     }
 }
 .footer_input_label {
 }
 .under_info {
 }
-.footer_navigatio_list {
-    @media (max-width: $mobile-media-size) {
-        order: 1;
-    }
-}
 .footer_navigation {
     @media (max-width: $mobile-media-size) {
         flex-direction: row;
+        order: 1;
         justify-content: space-between;
         align-items: flex-start;
     }
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
+    height: max-content;
     ul {
         display: flex;
         padding: 0;

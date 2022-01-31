@@ -7,6 +7,7 @@ li {
     top: 0;
     right: 0;
     z-index: 50;
+    margin-bottom: 80px;
 }
 .header::before {
     content: '';
@@ -133,9 +134,9 @@ li {
     }
 }
 
-.content {
-    padding: 60px 0 0 0;
-}
+// .content {
+//     padding: 60px 0 0 0;
+// }
 @media (max-width: $mobile-media-size) {
     body.lock_page {
         overflow: hidden;
