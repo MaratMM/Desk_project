@@ -26,6 +26,8 @@ html,
 body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F5EE;
+  margin: 0;
 }
 
 .container {
@@ -182,6 +184,11 @@ li {
   text-decoration: none;
 }
 
+.footer {
+  background-color: white;
+  width: 100%;
+}
+
 .footer_sections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,6 +307,73 @@ li {
   margin: 0 auto;
 }
 
+.main_page_content ._items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 640px;
+  padding: 0 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main_page_content ._items:nth-child(2n) {
+  position: relative;
+}
+
+.main_page_content ._items:nth-child(2n) ._description {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.main_page_content ._items:nth-child(2n)::before {
+  position: absolute;
+  background-color: white;
+  content: "";
+  z-index: 20;
+  top: 0;
+  left: calc((100vw - 1024px) / (-2));
+  width: 100vw;
+  height: inherit;
+}
+
+.main_page_content ._items picture {
+  z-index: 30;
+}
+
+.main_page_content ._items img {
+  width: 100%;
+}
+
+.main_page_content ._description {
+  width: 448px;
+  z-index: 30;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_page_content ._description h1 {
+  font-size: 44px;
+}
+
+.main_page_content ._description p {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media (max-width: 1024px) {
+  .main_page_content ._items:nth-child(2n)::before {
+    left: 0;
+  }
+}
+
 @media (max-width: 425px) {
   .header::before {
     height: 60px;
@@ -309,6 +383,9 @@ li {
 
   .header_logo {
     padding-top: 5px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45px;
+            flex: 0 0 45px;
   }
 
   .navigation_list {
@@ -424,5 +501,31 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+
+  .main_page_content ._items:nth-child(2n) ._description {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
+  .main_page_content ._items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+
+  .main_page_content ._description {
+    width: 100%;
+  }
+
+  .main_page_content ._description h1 {
+    font-size: 26px;
+  }
+
+  .main_page_content ._description p {
+    font-size: 18px;
   }
 }

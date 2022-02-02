@@ -36,6 +36,7 @@ li {
     z-index: 15;
     @media (max-width: $mobile-media-size) {
         padding-top: 5px;
+        flex: 0 0 45px;
     }
     img {
         max-width: 100%;
