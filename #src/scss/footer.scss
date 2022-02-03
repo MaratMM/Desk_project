@@ -1,9 +1,11 @@
 .footer {
     background-color: white;
     width: 100%;
+    padding-bottom: 40px;
 }
 .footer_sections {
     display: flex;
+    padding-top: 40px;
     justify-content: space-between;
     @media (max-width: $mobile-media-size) {
         flex-direction: column;
@@ -11,6 +13,9 @@
 }
 .footer_input {
     width: 480px;
+    span {
+        font-size: 14px;
+    }
     @media (max-width: $mobile-media-size) {
         order: 2;
         width: 100%;
@@ -24,7 +29,9 @@
     color: #FFFFFF;
 }
 .button_news {
+    border: none;
     height: 56px;
+    font-size: 18px;
     margin-left: 8px;
     @media (max-width: $mobile-media-size) {
         width: 100%;
@@ -61,7 +68,6 @@
     background-image: url('/img/sprite/line.svg');
     width: 30px;
     height: 30px;
-    outline: dashed 1px blue;
 }
     
 .div_form {
@@ -74,8 +80,11 @@
     }
 }
 .footer_input_label {
+    font-size: 18px;
 }
 .under_info {
+    font-size: 14px;
+    line-height: 17px;
 }
 .footer_navigation {
     @media (max-width: $mobile-media-size) {
@@ -89,10 +98,10 @@
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
-    height: max-content;
     ul {
         display: flex;
         padding: 0;
+        margin-top: 0;
         flex-wrap: wrap;
         @media (max-width: $mobile-media-size) {
             flex-direction: column;
@@ -110,16 +119,10 @@
         font-weight: bold;
     }
 }
-.link_nav {
-}
 .social_icons_menu {
     ul {
         @media (max-width: $mobile-media-size) {
             flex-direction: row;
         }
     }
-}
-.icon_faceBook {
-}
-.icon_Inst {
 }

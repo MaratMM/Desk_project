@@ -1,0 +1,22 @@
+.catalog {
+
+    @include midle-centred (1120px);
+
+    display: flex;
+    flex-direction: column;
+
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        
+        &__list {
+            padding: 0;
+            &__item {
+                &__picture {}
+                &__name {}
+                &__price {}
+            }
+        }
+    }
+}

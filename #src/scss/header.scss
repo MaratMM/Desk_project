@@ -92,7 +92,6 @@ li {
     background-position: 2px -190px;
     width: 30px;
     height: 30px;
-    outline: dashed 1px blue;
     @media (max-width: $mobile-media-size) {
         display: inline-block;
         position: relative;
@@ -117,7 +116,6 @@ li {
     content: '';
     width: 30px;
     height: 30px;
-    outline: dashed 1px blue;
     display: flex;
 
 }
@@ -156,12 +154,14 @@ li {
             background-position: 3px 3px;
         }
         li {
-            margin: 0 10px 0 0;
+            margin: 0 0 0 10px;
             content: '';
             background-repeat: no-repeat;
             width: 30px;
             height: 30px;
-            outline: dashed 1px blue;
+            @media (max-width: $mobile-media-size) {
+                margin: 0 10px 0 0;
+            }
             a {
                 text-decoration: none;
             }

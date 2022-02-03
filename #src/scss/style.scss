@@ -35,10 +35,18 @@ html, body {
 //переменные
 $mobile-media-size: 425px;
 
+//mixin для центровки
+
+@mixin midle-centred ($size-width) {
+    max-width: $size-width;
+    margin: 0 auto;
+    padding: 60px 10px 0 10px;
+}
+
 //основная стилизация
 
 @import "header";
 @import "footer";
-
 @import "main_page";
+@import "catalog";
 
