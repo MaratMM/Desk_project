@@ -11,12 +11,132 @@
         flex-direction: column;
         
         &__list {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 256px);
+            gap: 32px;
+            justify-content: flex-start;
             padding: 0;
+            @media (max-width: $mobile-media-size) {
+                gap: 17px;
+                grid-template-columns: repeat(auto-fit, 155px);
+                grid-auto-flow: dense;
+            }
+
+            .new {
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0" "NEW";
+                    word-wrap: break-word;
+                    color: white;
+                    font-size: 13px;
+                    top: 15px;
+                    right: 15px;
+                    border-radius: 50%;
+                    background-color: #2C9A7A;
+                    width: 46px;
+                    height: 46px;
+                }
+            }
+
+            .sale {
+
+                @media (max-width: $mobile-media-size) {
+                    grid-column: span 2;
+                }
+
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0" "SALE";
+                    word-wrap: break-word;
+                    color: white;
+                    font-size: 14px;
+                    top: 15px;
+                    right: 15px;
+                    border-radius: 50%;
+                    background-color: #EB5757;
+                    width: 46px;
+                    height: 46px;
+                }
+                .catalog__section__list__item__price {
+                    position: relative;
+                    color: #EB5757;
+                    &::after {
+                        position: relative;
+                        content: "5999₽";
+                        color: #828282;
+                        margin-left: 16px;
+                    }
+//////////////доработать косую черту, костыльно сделано
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 5px;
+                        left: 70px;
+                        width: 35px;
+                        transform: rotate(-15deg);
+                        height: 2px;
+                        background-color: red;
+                        opacity: 0.5;
+                    }
+                }   
+            }
+            
             &__item {
-                &__picture {}
-                &__name {}
-                &__price {}
+                &__mailing {
+                    height: 256px;
+                    color: white;
+                    background-color: #9A632E;
+                    & * {
+                        margin: 24px;
+                    }
+                    &__icon {
+                        width: 42px;
+                        height: 42px;
+                        background-repeat: no-repeat;
+                        background-position: -80px -35px;
+                        background-image: url("../img/sprite/fill.svg");
+                        // svg path {
+                        //     fill: white;
+                        // }
+                    }
+                    &__text {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                    &__sale {
+                        font-size: 44px;
+                        font-weight: 500;
+                    }
+                }
+                picture {
+                    height: 256px;
+                    @media (max-width: $mobile-media-size) {
+                        height: 100%;
+                    }
+                }
+                display: flex;
+                flex-direction: column;
+                & * {
+                    margin-bottom: 8px;
+                }
+                &__picture {
+                    @media (max-width: $mobile-media-size) {
+                        width: 100%;
+                    }
+                }
+                &__name {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                &__price {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
             }
         }
     }
 }
+

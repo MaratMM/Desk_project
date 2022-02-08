@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "BebasNeue-Regular";
   font-display: swap;
@@ -217,9 +219,15 @@ li {
 
 .button_news {
   border: none;
+  padding: 0 15px 0 15px;
   height: 56px;
   font-size: 18px;
   margin-left: 8px;
+}
+
+.footer_input_news {
+  border: none;
+  background-color: #F2F2F2;
 }
 
 .form_footer {
@@ -403,7 +411,132 @@ li {
 }
 
 .catalog__section__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 256px);
+  gap: 32px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 0;
+}
+
+.catalog__section__list .new {
+  position: relative;
+}
+
+.catalog__section__list .new::before {
+  position: absolute;
+  content: "              " "NEW";
+  word-wrap: break-word;
+  color: white;
+  font-size: 13px;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  background-color: #2C9A7A;
+  width: 46px;
+  height: 46px;
+}
+
+.catalog__section__list .sale {
+  position: relative;
+}
+
+.catalog__section__list .sale::before {
+  position: absolute;
+  content: "            " "SALE";
+  word-wrap: break-word;
+  color: white;
+  font-size: 14px;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  background-color: #EB5757;
+  width: 46px;
+  height: 46px;
+}
+
+.catalog__section__list .sale .catalog__section__list__item__price {
+  position: relative;
+  color: #EB5757;
+}
+
+.catalog__section__list .sale .catalog__section__list__item__price::after {
+  position: relative;
+  content: "5999₽";
+  color: #828282;
+  margin-left: 16px;
+}
+
+.catalog__section__list .sale .catalog__section__list__item__price::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 70px;
+  width: 35px;
+  -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  height: 2px;
+  background-color: red;
+  opacity: 0.5;
+}
+
+.catalog__section__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.catalog__section__list__item__mailing {
+  height: 256px;
+  color: white;
+  background-color: #9A632E;
+}
+
+.catalog__section__list__item__mailing * {
+  margin: 24px;
+}
+
+.catalog__section__list__item__mailing__icon {
+  width: 42px;
+  height: 42px;
+  background-repeat: no-repeat;
+  background-position: -80px -35px;
+  background-image: url("../img/sprite/fill.svg");
+}
+
+.catalog__section__list__item__mailing__text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.catalog__section__list__item__mailing__sale {
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.catalog__section__list__item picture {
+  height: 256px;
+}
+
+.catalog__section__list__item * {
+  margin-bottom: 8px;
+}
+
+.catalog__section__list__item__name {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.catalog__section__list__item__price {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
@@ -536,6 +669,7 @@ li {
 
   .foot_nav_item {
     margin-bottom: 12px;
+    padding-left: 0;
   }
 
   .social_icons_menu ul {
@@ -569,5 +703,23 @@ li {
 
   .main_page_content ._description p {
     font-size: 18px;
+  }
+
+  .catalog__section__list {
+    gap: 17px;
+    grid-template-columns: repeat(auto-fit, 155px);
+    grid-auto-flow: dense;
+  }
+
+  .catalog__section__list .sale {
+    grid-column: span 2;
+  }
+
+  .catalog__section__list__item picture {
+    height: 100%;
+  }
+
+  .catalog__section__list__item__picture {
+    width: 100%;
   }
 }

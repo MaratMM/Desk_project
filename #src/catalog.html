@@ -1,5 +1,22 @@
-@@include('_docOpen.html')
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Gulp</title>
+    <style>
+        .navigation_link_catalog {
+    color: #828282;
+}
+    </style>
+</head>
+
+<body>
 @@include('_header.html')
+
 <!-- @@include('_bread_crumbs.html') -->
 
 <div class="catalog padding_for_header">
@@ -17,7 +34,7 @@
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
                 <span class="catalog__section__list__item__price">6_199₽</span>
             </li>
-            <li class="catalog__section__list__item">
+            <li class="catalog__section__list__item sale">
                 <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
                 <span class="catalog__section__list__item__price">6_199₽</span>
@@ -27,15 +44,17 @@
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
                 <span class="catalog__section__list__item__price">6_199₽</span>
             </li>
-            <li class="catalog__section__list__item">
+            <li class="catalog__section__list__item new">
                 <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
                 <span class="catalog__section__list__item__price">6_199₽</span>
             </li>
             <li class="catalog__section__list__item">
-                <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
-                <span class="catalog__section__list__item__name">Столик_Fly</span>
-                <span class="catalog__section__list__item__price">6_199₽</span>
+                <div class="catalog__section__list__item__mailing">
+                    <div class="catalog__section__list__item__mailing__icon"></div>
+                    <p class="catalog__section__list__item__mailing__text">Подпишитесь на рассылку и получите скидку</p>
+                    <span class="catalog__section__list__item__mailing__sale">10%</span>
+                </div>
             </li>
             <li class="catalog__section__list__item">
                 <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
@@ -57,6 +76,11 @@
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
                 <span class="catalog__section__list__item__price">6_199₽</span>
             </li>
+            <li class="catalog__section__list__item">
+                <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
+                <span class="catalog__section__list__item__name">Столик_Fly</span>
+                <span class="catalog__section__list__item__price">6_199₽</span>
+            </li>
         </ul>
     </div>
     <div class="catalog__decisions catalog__section">
@@ -67,11 +91,25 @@
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
                 <span class="catalog__section__list__item__price">6_199₽</span>
             </li>
+            <li class="catalog__section__list__item">
+                <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
+                <span class="catalog__section__list__item__name">Столик_Fly</span>
+                <span class="catalog__section__list__item__price">6_199₽</span>
+            </li><li class="catalog__section__list__item">
+                <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
+                <span class="catalog__section__list__item__name">Столик_Fly</span>
+                <span class="catalog__section__list__item__price">6_199₽</span>
+            </li>
         </ul>
     </div>
     <div class="catalog__accessories catalog__section">
         <h2>Аксессуары</h2>
         <ul class="catalog__section__list">
+            <li class="catalog__section__list__item">
+                <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
+                <span class="catalog__section__list__item__name">Столик_Fly</span>
+                <span class="catalog__section__list__item__price">6_199₽</span>
+            </li>
             <li class="catalog__section__list__item">
                 <img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt="">
                 <span class="catalog__section__list__item__name">Столик_Fly</span>
