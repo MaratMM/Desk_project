@@ -49,7 +49,10 @@
                 position: relative;
                 &::before{
                     position: absolute;
-                    content: "\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0\00A0" "SALE";
+                    content: "SALE";
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     word-wrap: break-word;
                     color: white;
                     font-size: 14px;
@@ -61,25 +64,26 @@
                     height: 46px;
                 }
                 .catalog__section__list__item__price {
-                    position: relative;
+                    width: max-content;
                     color: #EB5757;
-                    &::after {
-                        position: relative;
-                        content: "5999₽";
+                    &__sale {
+                        display: inline;
                         color: #828282;
-                        margin-left: 16px;
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            top: 8px;
+                            width: 100%;
+                            transform: rotate(-10deg);
+                            height: 2px;
+                            background-color: red;
+                            opacity: 0.5;
+                        }
                     }
 //////////////доработать косую черту, костыльно сделано
                     &::before {
-                        position: absolute;
-                        content: "";
-                        top: 5px;
-                        left: 70px;
-                        width: 35px;
-                        transform: rotate(-15deg);
-                        height: 2px;
-                        background-color: red;
-                        opacity: 0.5;
+                        
                     }
                 }   
             }
@@ -95,12 +99,15 @@
                     &__icon {
                         width: 42px;
                         height: 42px;
-                        background-repeat: no-repeat;
-                        background-position: -80px -35px;
                         background-image: url("../img/sprite/fill.svg");
-                        // svg path {
-                        //     fill: white;
-                        // }
+                        background-position: -80px -35px;
+                        background-repeat: no-repeat;
+                        svg {
+                            path {
+                                fill: white;
+                            }
+
+                        }
                     }
                     &__text {
                         font-size: 18px;
@@ -132,6 +139,9 @@
                     font-weight: 400;
                 }
                 &__price {
+                    &__sale {
+                        display: none;
+                    }
                     font-size: 18px;
                     font-weight: 500;
                 }

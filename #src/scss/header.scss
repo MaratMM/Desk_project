@@ -87,7 +87,7 @@ li {
 .btn_close_menu {
     display: none;
     content: '';
-    background-image: url('/img/sprite/line.svg');
+    background-image: url('../img/sprite/line.svg');
     background-repeat: no-repeat;
     background-position: 2px -190px;
     width: 30px;
@@ -120,7 +120,7 @@ li {
 
 }
 .icon_basket {
-    background-image: url('/img/sprite/line.svg');
+    background-image: url('../img/sprite/line.svg');
     background-position: 2px 2px;
     background-repeat: no-repeat;
 }
@@ -128,7 +128,7 @@ li {
     display: none;
     @media (max-width: $mobile-media-size) {
         display: flex;
-        background-image: url('/img/sprite/line.svg');
+        background-image: url('../img/sprite/line.svg');
         background-position: -141px -141px;
     }
 }
@@ -146,11 +146,11 @@ li {
         padding: 30px 0 0 0;
         display: flex;
         .icon_faceBook {
-            background-image: url('/img/Logo/facebook.svg');
+            background-image: url('../img/Logo/facebook.svg');
             background-position: -1px 1px;
         }
         .icon_Inst {
-            background-image: url('/img/Logo/instagram.svg');
+            background-image: url('../img/Logo/instagram.svg');
             background-position: 3px 3px;
         }
         li {

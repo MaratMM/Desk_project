@@ -117,7 +117,7 @@ li {
 .btn_close_menu {
   display: none;
   content: "";
-  background-image: url("/img/sprite/line.svg");
+  background-image: url("../img/sprite/line.svg");
   background-repeat: no-repeat;
   background-position: 2px -190px;
   width: 30px;
@@ -145,7 +145,7 @@ li {
 }
 
 .icon_basket {
-  background-image: url("/img/sprite/line.svg");
+  background-image: url("../img/sprite/line.svg");
   background-position: 2px 2px;
   background-repeat: no-repeat;
 }
@@ -162,12 +162,12 @@ li {
 }
 
 .social_icons_menu ul .icon_faceBook {
-  background-image: url("/img/Logo/facebook.svg");
+  background-image: url("../img/Logo/facebook.svg");
   background-position: -1px 1px;
 }
 
 .social_icons_menu ul .icon_Inst {
-  background-image: url("/img/Logo/instagram.svg");
+  background-image: url("../img/Logo/instagram.svg");
   background-position: 3px 3px;
 }
 
@@ -258,7 +258,7 @@ li {
   background-position: -142px -93px;
   display: block;
   background-repeat: no-repeat;
-  background-image: url("/img/sprite/line.svg");
+  background-image: url("../img/sprite/line.svg");
   width: 30px;
   height: 30px;
 }
@@ -445,7 +445,16 @@ li {
 
 .catalog__section__list .sale::before {
   position: absolute;
-  content: "            " "SALE";
+  content: "SALE";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   word-wrap: break-word;
   color: white;
   font-size: 14px;
@@ -458,26 +467,26 @@ li {
 }
 
 .catalog__section__list .sale .catalog__section__list__item__price {
-  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   color: #EB5757;
 }
 
-.catalog__section__list .sale .catalog__section__list__item__price::after {
-  position: relative;
-  content: "5999₽";
+.catalog__section__list .sale .catalog__section__list__item__price__sale {
+  display: inline;
   color: #828282;
-  margin-left: 16px;
+  position: relative;
 }
 
-.catalog__section__list .sale .catalog__section__list__item__price::before {
+.catalog__section__list .sale .catalog__section__list__item__price__sale::before {
   position: absolute;
   content: "";
-  top: 5px;
-  left: 70px;
-  width: 35px;
-  -webkit-transform: rotate(-15deg);
-      -ms-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  top: 8px;
+  width: 100%;
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
   height: 2px;
   background-color: red;
   opacity: 0.5;
@@ -506,9 +515,13 @@ li {
 .catalog__section__list__item__mailing__icon {
   width: 42px;
   height: 42px;
-  background-repeat: no-repeat;
-  background-position: -80px -35px;
   background-image: url("../img/sprite/fill.svg");
+  background-position: -80px -35px;
+  background-repeat: no-repeat;
+}
+
+.catalog__section__list__item__mailing__icon svg path {
+  fill: white;
 }
 
 .catalog__section__list__item__mailing__text {
@@ -537,6 +550,10 @@ li {
 .catalog__section__list__item__price {
   font-size: 18px;
   font-weight: 500;
+}
+
+.catalog__section__list__item__price__sale {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -598,7 +615,7 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-image: url("/img/sprite/line.svg");
+    background-image: url("../img/sprite/line.svg");
     background-position: -141px -141px;
   }
 
