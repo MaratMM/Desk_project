@@ -48,17 +48,35 @@ iconBurger.addEventListener('click', function(evt) {
     document.querySelector('body').classList.add('lock_page');
 });;
 
-//////////////нижняя часть задумка, боловство учимся прогать
 
 window.addEventListener('DOMContentLoaded', function () {
-    const salePrice = document.querySelectorAll('li.catalog__section__list__item.sale>span.catalog__section__list__item__price>span.catalog__section__list__item__price__sale');
+//////////////нижняя часть задумка, боловство учимся прогать
+    // const salePrice = document.querySelectorAll('li.catalog__section__list__item.sale>span.catalog__section__list__item__price>span.catalog__section__list__item__price__sale');
 
-    console.log(salePrice);
+    // console.log(salePrice);
 
-    for (let i = 0; i < salePrice.length; i++) {
-        console.log(salePrice[i].getBoundingClientRect().width);
-    }
+    // for (let i = 0; i < salePrice.length; i++) {
+    //     console.log(salePrice[i].getBoundingClientRect().width);
+    // }
 
+    //ниже код для раскрытия картинок по нажитию кнопки  и сокрытие
+    const btnShowPicture=document.querySelector('.product__picture__item__btnshowpicture');
+    const btnHiddenPicture=document.querySelector('.product__picture__item__btnhiddenpicture');
+    const productPictureItem=document.querySelectorAll('.product__picture__item:not(:first-child)');
+
+    btnShowPicture.addEventListener('click', function(){
+        btnShowPicture.style.display='none';
+        for (let i=0; i<productPictureItem.length; i++) {
+            productPictureItem[i].classList.add('display__block');
+        }
+    });
+
+    btnHiddenPicture.addEventListener('click', function(){
+        btnShowPicture.style.display='block';
+        for (let i=0; i<productPictureItem.length; i++) {
+            productPictureItem[i].classList.remove('display__block');
+        }
+    });
 
 });
 

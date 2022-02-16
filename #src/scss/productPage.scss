@@ -1,0 +1,72 @@
+.product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 64px;
+    justify-content: space-between;
+    @include midle-centred (1120px);
+
+    @media (max-width: $mobile-media-size) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__picture{
+        &__item {
+            display: block;
+            picture {
+                position: relative;
+            }
+            @media (max-width: $mobile-media-size) {
+                &:first-child {
+                    position: relative;
+                }
+                &:last-child {
+                    position: relative;
+                }
+                &:not(:first-child) {
+                    display: none;
+                }
+                &:not(:first-child).display__block {
+                    display: block;
+                    transition: display 3s ease;
+                }
+
+            }
+            &__btnshowpicture {
+                display: none;
+            }
+            &__btnhiddenpicture {
+                display: none;
+            }
+            @media (max-width: $mobile-media-size) {
+                &__btnshowpicture {
+                    display: block;
+                    position: absolute;
+                    width: 122px;
+                    height: 32px;
+                    content: "";
+                    bottom: 15px;
+                    right: 10px;
+                    background-repeat: no-repeat;
+                    background-image: url("../img/buttons/button.png");
+                }
+                &__btnhiddenpicture {
+                    display: block;
+                    position: absolute;
+                    width: 122px;
+                    height: 32px;
+                    content: "";
+                    bottom: 15px;
+                    right: -10px;
+                    background-repeat: no-repeat;
+                    background-image: url("../img/buttons/buttonhiddenpicture.png");
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+        
+    }
+    &__description{}
+}
