@@ -1,6 +1,5 @@
 //необходимая часть , не удалять!!!!!!!!!!
 ////alert('Hello gulp!');;
-
 function testWebP(callback) {
 
     var webP = new Image();
@@ -23,7 +22,20 @@ testWebP(function (support) {
 
 //import "./btnCloseMenu";
 
-//скрипт выпадающего меню по нажатию на кнопки
+//;
+
+
+window.addEventListener('DOMContentLoaded', function () {
+//////////////нижняя часть задумка, боловство учимся прогать
+    // const salePrice = document.querySelectorAll('li.catalog__section__list__item.sale>span.catalog__section__list__item__price>span.catalog__section__list__item__price__sale');
+
+    // console.log(salePrice);
+
+    // for (let i = 0; i < salePrice.length; i++) {
+    //     console.log(salePrice[i].getBoundingClientRect().width);
+    // }
+
+    //скрипт выпадающего меню по нажатию на кнопки
 let btnCloseMenu=document.querySelector(".btn_close_menu");
 let navList=document.querySelector(".navigation_list");
 
@@ -46,18 +58,7 @@ iconBurger.addEventListener('click', function(evt) {
     navList.classList.remove('vip_menu');
     document.querySelector('.div_icons').classList.add('vip_menu');
     document.querySelector('body').classList.add('lock_page');
-});;
-
-
-window.addEventListener('DOMContentLoaded', function () {
-//////////////нижняя часть задумка, боловство учимся прогать
-    // const salePrice = document.querySelectorAll('li.catalog__section__list__item.sale>span.catalog__section__list__item__price>span.catalog__section__list__item__price__sale');
-
-    // console.log(salePrice);
-
-    // for (let i = 0; i < salePrice.length; i++) {
-    //     console.log(salePrice[i].getBoundingClientRect().width);
-    // }
+});
 
     //ниже код для раскрытия картинок по нажитию кнопки  и сокрытие
     const btnShowPicture=document.querySelector('.product__picture__item__btnshowpicture');
@@ -70,13 +71,27 @@ window.addEventListener('DOMContentLoaded', function () {
             productPictureItem[i].classList.add('display__block');
         }
     });
-
     btnHiddenPicture.addEventListener('click', function(){
         btnShowPicture.style.display='block';
         for (let i=0; i<productPictureItem.length; i++) {
             productPictureItem[i].classList.remove('display__block');
         }
     });
+
+    //ниже код счетчика counter
+
+    const counterMinus=document.querySelector('.product__description__counter__item__minus');
+    const counterValue=document.querySelector('.product__description__counter__item__value');
+    const counterPlus=document.querySelector('.product__description__counter__item__plus');
+
+    counterMinus.addEventListener('click', function() {
+        if (counterValue.value>1) {
+            counterValue.value--;
+        }
+    })
+    counterPlus.addEventListener('click', function() {
+        counterValue.value++;
+    })
 
 });
 
