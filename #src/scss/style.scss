@@ -29,7 +29,7 @@ html, body {
 }
 
 .padding_for_header {
-    padding-top: 66px;
+    padding-top: 80px;
     width: 100%;
     height: 1px;
 }
@@ -45,7 +45,7 @@ $mobile-media-size: 425px;
     padding: 0px 10px 0 10px;
 }
 
-//основная стилизация
+//основная стилизация (импорты)
 
 @import "header";
 @import "footer";
@@ -53,3 +53,42 @@ $mobile-media-size: 425px;
 @import "catalog";
 @import "productPage";
 
+
+//для хлебных крошек
+
+.breadcrumbs {
+    @media (max-width: $mobile-media-size) {
+        display: none;
+    }
+    @include midle-centred (1120px);
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        padding: 0;
+        &__item {
+            margin-right: 10px;
+            &:not(:first-child) {
+                position: relative;
+                margin-left: 82px;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 72px;
+                    height: 1px;
+                    top: 50%;
+                    left: -82px;
+                    background-color: #D9D7D8;
+                }
+            }
+            &:last-child>a {
+                color: #828282;
+            }
+            &>a {
+                text-decoration: none;
+                color: #262F56;
+                &:hover {}
+            }
+        }
+    }
+}

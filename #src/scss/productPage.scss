@@ -28,7 +28,6 @@
                 }
                 &:not(:first-child).display__block {
                     display: block;
-                    transition: display 3s ease;
                 }
 
             }
@@ -68,7 +67,6 @@
         }
         
     }
-
 
     &__description{
         display: flex;
