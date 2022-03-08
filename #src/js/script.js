@@ -97,12 +97,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
     const lastBreadCrumb = document.querySelector('.breadcrumbs__list__item:last-child>a');
 
-    lastBreadCrumb?.addEventListener('click', function () {
-        console.log('find link');
-    })
+    // lastBreadCrumb?.addEventListener('click', function () {
+    //     console.log('find link');
+    // })
 
     if (lastBreadCrumb) {
-        lastBreadCrumb.setAttribute("disabled", "disabled");
+        // lastBreadCrumb.setAttribute("disabled", "disabled");
+        lastBreadCrumb.classList.add('disable__link');
     }
 
 });

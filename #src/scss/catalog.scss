@@ -67,6 +67,7 @@
                     width: max-content;
                     color: #EB5757;
                     &__sale {
+                        margin-left: 10px;
                         display: inline;
                         color: #828282;
                         position: relative;
@@ -90,6 +91,8 @@
             
             &__item {
                 &__mailing {
+                    display: flex;
+                    flex-direction: column;
                     height: 256px;
                     color: white;
                     background-color: #9A632E;
@@ -97,17 +100,19 @@
                         margin: 24px;
                     }
                     &__icon {
-                        width: 42px;
-                        height: 42px;
-                        background-image: url("../img/sprite/fill.svg");
-                        background-position: -80px -35px;
-                        background-repeat: no-repeat;
-                        svg {
-                            path {
-                                fill: white;
-                            }
-
-                        }
+                        // position: relative;
+                        // width: 42px;
+                        // height: 42px;
+                        // background-image: url("../img/sprite/fill.svg");
+                        // background-position: -85px -35px;
+                        // background-repeat: no-repeat;
+                        // //background-size: 10%;
+                        // svg {
+                        //     path {
+                        //     fill: white;
+                        // }
+                        // }
+                        
                     }
                     &__text {
                         font-size: 18px;

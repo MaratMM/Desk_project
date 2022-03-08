@@ -36,6 +36,7 @@ html, body {
 
 //переменные
 $mobile-media-size: 425px;
+$mob-tabl-media-size: 760px;
 
 //mixin для центровки
 
@@ -52,7 +53,7 @@ $mobile-media-size: 425px;
 @import "main_page";
 @import "catalog";
 @import "productPage";
-
+@import "cart";
 
 //для хлебных крошек
 
@@ -83,6 +84,10 @@ $mobile-media-size: 425px;
             }
             &:last-child>a {
                 color: #828282;
+                &.disable__link {
+                    pointer-events: none;
+	                cursor: default;
+                }
             }
             &>a {
                 text-decoration: none;

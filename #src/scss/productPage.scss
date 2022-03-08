@@ -86,11 +86,19 @@
             align-items: center;
             font-size: 30px;
             font-weight: 500;
-            color: red;
+            &.sale {
+                .product__description__price__sale {
+                    display: block;
+                }
+                .product__description__price__real {
+                    color: red;
+                }
+            }
             &__real {
                 margin-right: 10px;
             }
             &__sale {
+                display: none;
                 font-size: 16px;
                 font-weight: 400;
                 color: #828282;
@@ -111,7 +119,7 @@
         &__counter {
             &__name {}
             &__item {
-                margin-top: 10px;
+                //margin-top: 10px;
                 display: flex;
                 width: 136px;
                 height: 56px;
