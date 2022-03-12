@@ -1,18 +1,15 @@
-//необходимая часть , не удалять!!!!!!!!!!
+//добавление других js  к общему файлу
 ////alert('Hello gulp!');;
 
-
+//необходимая часть , не удалять!!!!!!!!!!
 // function testWebP(callback) {
-
 //     var webP = new Image();
 //     webP.onload = webP.onerror = function () {
 //         callback(webP.height == 2);
 //     };
 //     webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 // }
-
 // testWebP(function (support) {
-
 //     if (support == true) {
 //         document.querySelector('body').classList.add('webp');
 //     } else {
@@ -21,28 +18,14 @@
 // });
 
 //основной скрипт
-
-//import "./btnCloseMenu";
-
 //;
-
-
 window.addEventListener('DOMContentLoaded', function () {
-    //////////////нижняя часть задумка, боловство учимся прогать
-    // const salePrice = document.querySelectorAll('li.catalog__section__list__item.sale>span.catalog__section__list__item__price>span.catalog__section__list__item__price__sale');
-
-    // console.log(salePrice);
-
-    // for (let i = 0; i < salePrice.length; i++) {
-    //     console.log(salePrice[i].getBoundingClientRect().width);
-    // }
+    //////////////функция вывода размеров   console.log(salePrice[i].getBoundingClientRect().width);
 
     //скрипт выпадающего меню по нажатию на кнопки
     let btnCloseMenu = document.querySelector(".btn_close_menu");
     let navList = document.querySelector(".navigation_list");
-
     let iconBurger = document.querySelector(".icon_burger");
-
 
     btnCloseMenu?.addEventListener('click', function (evt) {
         evt.preventDefault();
@@ -80,32 +63,52 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //ниже код счетчика counter
+    //ниже код счетчика counter и умножения цены
+    const counterMinus = document.querySelectorAll('.product__description__counter__item__minus');
+    const counterValue = document.querySelectorAll('.product__description__counter__item__value');
+    const counterPlus = document.querySelectorAll('.product__description__counter__item__plus');
+    const priceReal = document.querySelectorAll('.product__description__price__real__number');
+    const priceSale = document.querySelectorAll('.product__description__price__sale__number');
+    const sumPrice = document.querySelector('.cart__summprice__price');
 
-    const counterMinus = document.querySelector('.product__description__counter__item__minus');
-    const counterValue = document.querySelector('.product__description__counter__item__value');
-    const counterPlus = document.querySelector('.product__description__counter__item__plus');
-
-    counterMinus?.addEventListener('click', function () {
-        if (counterValue.value > 1) {
-            counterValue.value--;
+    for (let i = 0; i < counterValue.length; i++) {
+        let numPriceReal = Number(priceReal[i].textContent);
+        let numPriceSale = Number(priceSale[i].textContent);
+        let totalAmount = function () {
+            priceReal[i].textContent = numPriceReal * counterValue[i].value;
+            priceSale[i].textContent = numPriceSale * counterValue[i].value;
+            let xxxxx = 0;
+            for (let k = 0; k < priceReal.length; k++) {
+                xxxxx += Number(priceReal[k].textContent);
+            }
+            if (sumPrice) {
+                sumPrice.textContent = Number(xxxxx);
+            }
         }
-    })
-    counterPlus?.addEventListener('click', function () {
-        counterValue.value++;
-    })
+        totalAmount();
 
+        counterMinus[i]?.addEventListener('click', function () {
+            if (counterValue[i].value > 1) {
+                counterValue[i].value--;
+                totalAmount();
+            }
+        })
+        counterPlus[i]?.addEventListener('click', function () {
+            counterValue[i].value++;
+            totalAmount();
+        })
+        counterValue[i]?.addEventListener('change', function () {
+            totalAmount();
+        })
+    };
+
+    //код для хлебных крошек
     const lastBreadCrumb = document.querySelector('.breadcrumbs__list__item:last-child>a');
-
-    // lastBreadCrumb?.addEventListener('click', function () {
-    //     console.log('find link');
-    // })
 
     if (lastBreadCrumb) {
         // lastBreadCrumb.setAttribute("disabled", "disabled");
         lastBreadCrumb.classList.add('disable__link');
     }
-
 });
 
 
