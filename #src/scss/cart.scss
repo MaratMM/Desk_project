@@ -3,6 +3,146 @@
     h1 {}
     h2 {}
 
+    &__finalypay {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        margin-bottom: 88px;
+        padding: 40px 56px;
+
+        &__table {
+            width: 30%;
+            tr {
+                td {
+                    &:nth-child(2) {
+                        text-align: right;
+                    }
+                }
+                &:nth-child(1) {
+                    font-size: 30px;
+                    font-weight: bolder;
+                    line-height: 30px;
+                }
+                &:nth-child(2) {}
+                &:nth-child(3) {
+                    td {
+                        &:nth-child(2) {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        &__section {
+            width: 60%;
+            input[type="button"] {
+                border: none;
+                width: 100%;
+                height: 56px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__addresdestination {
+        margin-bottom: 64px;
+        position: relative;
+        width: 100%;
+        &__map {
+            width: 1120px;
+            height: 450px;
+        }
+        &__section {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            &__addres {
+                margin-bottom: 10px;
+                &>label {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-image: url('../img/sprite/line.svg');
+                        width: 25px;
+                        height: 25px;
+                        background-position: -50px -140px;
+                        background-repeat: no-repeat;
+                        top: -10px;
+                        left: 10px;
+                    }
+                    input[id="addresdestination"] {
+                        border: none;
+                        font-size: 18px;
+                        padding-left: 50px;
+                        min-height: 56px;
+                    }
+                }  
+            }
+            &__deliverymethod {
+                padding-left: 15px;
+                p {
+                    font-weight: bold;
+                }
+                label {
+                    &>input {
+                        display: none;
+                    }
+                    padding-left: 25px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        left: 0px;
+                        top: -3px;
+                        background-image: url('../img/sprite/line.svg');
+                        background-size: 700%;
+                    }
+                }
+                label[for="courier"] {
+                    &::before {
+                        background-position: 0 -42px;
+                    }
+                }
+                label[for="pickup"] {
+                    &::before {
+                        background-position: -80px -80px;
+                    }
+                }
+                background-color: white;
+                width: 400px;
+                //height: 200px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__cdek {
+            //height: 50px;
+            background-color: white;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            &__logo {
+                margin: 20px 15px;
+            }
+        }
+
+    }
+
+    &__summprice {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: 500;
+        font-size: 30px;
+        padding: 24px 0;
+        @media (max-width: $mob-tabl-media-size) {
+            justify-content: flex-start;
+        }
+    }
+
     &__list {
         width: 100%;
         border-collapse: collapse;

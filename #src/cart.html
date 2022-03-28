@@ -22,10 +22,11 @@
         <tr class="cart__list__item">
             <td class="cart__list__item__name">
                 <div class="cart__list__item__name__img"><img src="./img/product/develius/background.png" alt=""></div>
-                <span class="cart__list__item__name__part">Стул Fly<span class="cart__list__item__name__part__deletefrombasket">
-                    <div class="cart__list__item__name__part__deletefrombasket__icon"></div>
-                    <span>Убрать из моей корзины</span>
-                </span>
+                <span class="cart__list__item__name__part">Стул Fly<span
+                        class="cart__list__item__name__part__deletefrombasket">
+                        <div class="cart__list__item__name__part__deletefrombasket__icon"></div>
+                        <span>Убрать из моей корзины</span>
+                    </span>
                 </span>
             </td>
             <td class="cart__list__item__counter">
@@ -44,18 +45,21 @@
             </td>
             <td class="cart__list__item__price">
                 <div class="product__description__price sale">
-                    <span class="product__description__price__real"><span class="product__description__price__real__number">105607</span>  <span>₽</span></span><span
-                        class="product__description__price__sale"><span class="product__description__price__sale__number">145000</span>  <span>₽</span> </span>
+                    <span class="product__description__price__real"><span
+                            class="product__description__price__real__number">105607</span> <span>₽</span></span><span
+                        class="product__description__price__sale"><span
+                            class="product__description__price__sale__number">145000</span> <span>₽</span> </span>
                 </div>
             </td>
         </tr>
         <tr class="cart__list__item">
             <td class="cart__list__item__name">
                 <div class="cart__list__item__name__img"><img src="./img/product/develius/background.png" alt=""></div>
-                <span class="cart__list__item__name__part">Стул Fly<span class="cart__list__item__name__part__deletefrombasket">
-                    <div class="cart__list__item__name__part__deletefrombasket__icon"></div>
-                    <span>Убрать из моей корзины</span>
-                </span>
+                <span class="cart__list__item__name__part">Стул Fly<span
+                        class="cart__list__item__name__part__deletefrombasket">
+                        <div class="cart__list__item__name__part__deletefrombasket__icon"></div>
+                        <span>Убрать из моей корзины</span>
+                    </span>
                 </span>
             </td>
             <td class="cart__list__item__counter">
@@ -74,8 +78,10 @@
             </td>
             <td class="cart__list__item__price">
                 <div class="product__description__price sale">
-                    <span class="product__description__price__real"><span class="product__description__price__real__number">106607</span>  <span>₽</span></span><span
-                        class="product__description__price__sale"><span class="product__description__price__sale__number">145000</span>  <span>₽</span> </span>
+                    <span class="product__description__price__real"><span
+                            class="product__description__price__real__number">106607</span> <span>₽</span></span><span
+                        class="product__description__price__sale"><span
+                            class="product__description__price__sale__number">145000</span> <span>₽</span> </span>
                 </div>
             </td>
         </tr>
@@ -83,6 +89,56 @@
     <div class="cart__summprice">
         <span class="cart__summprice__text">Итог:</span>
         <span class="cart__summprice__price"></span>
+    </div>
+    <h2>Адрес достави</h2>
+    <div class="cart__addresdestination">
+        <iframe class="cart__addresdestination__map
+        " src="https://yandex.ru/map-widget/v1/?um=constructor%3A998f7532dcafb9ef27c3b977b358889d09f1568944e2118822a6798005bb27d8&amp;source=constructor"
+            frameborder="0"></iframe>
+        <div class="cart__addresdestination__section">
+            <form action="" class="cart__addresdestination__section__addres">
+                <label for="addresdestination">
+                    <input type="text" value="Казань" id="addresdestination">
+                </label>
+            </form>
+            <form action="get" class="cart__addresdestination__section__deliverymethod">
+                <p>Выберите способ доставки</p>
+                <label for="courier">
+                    <input type="radio" name="deliverymethod" id="courier" value="courier" checked>Курьер, 2–3 дня, 610 ₽
+                </label>
+                <label for="pickup">
+                    <input type="radio" name="deliverymethod" id="pickup" value="pickup">Самовывоз, 5–6 дней, 1 050 ₽
+                </label>
+            </form>
+        </div>
+        <div class="cart__addresdestination__cdek">
+            <img src="./img/Logo/cdek.png" alt="cdek_logo" class="cart__addresdestination__cdek__logo">
+        </div>
+    </div>
+    <div class="cart__finalypay">
+        <table class="cart__finalypay__table">
+            <tr>
+                <td>Всего</td>
+                <td><span></span> ₽</td>
+            </tr>
+            <tr>
+                <td>Товаров</td>
+                <td><span></span> ₽</td>
+            </tr>
+            <tr>
+                <td>Скидка</td>
+                <td>-<span></span> ₽</td>
+            </tr>
+            <tr>
+                <td>Доставка</td>
+                <td>Бесплатно</td>
+            </tr>
+        </table>
+        <div class="cart__finalypay__section">
+            <input type="button" value="Перейти к оплате" class="cart__finalypay__section__button button">
+            <p>Нажимая на кнопку «Перейти к оплате», вы соглашаетесь с политикой обработки персональных данных. Услугу оплаты предоставляет сервис онлайн-платежей «Альфа банк».</p>
+            <p>Мы свяжемся с вами для подтверждения заказа по указанному телефону или электронной почте в ближайшее время (с 9.00 до 18.00 в рабочие дни).</p>
+        </div>
     </div>
 </div>
 
