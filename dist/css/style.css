@@ -812,6 +812,7 @@ li {
 }
 
 .cart__finalypay {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -823,6 +824,7 @@ li {
 }
 
 .cart__finalypay__table {
+  z-index: 30;
   width: 30%;
 }
 
@@ -841,6 +843,7 @@ li {
 }
 
 .cart__finalypay__section {
+  z-index: 30;
   width: 60%;
 }
 
@@ -858,7 +861,7 @@ li {
 }
 
 .cart__addresdestination__map {
-  width: 1120px;
+  width: 100%;
   height: 450px;
 }
 
@@ -1093,6 +1096,22 @@ li {
 }
 
 @media (max-width: 760px) {
+  .cart__finalypay::before {
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    z-index: 20;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .cart__addresdestination__section > form {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
   .cart__summprice {
     -webkit-box-pack: start;
         -ms-flex-pack: start;

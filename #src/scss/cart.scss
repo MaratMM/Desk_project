@@ -4,6 +4,19 @@
     h2 {}
 
     &__finalypay {
+        position: relative;
+        &::before{
+            @media (max-width: $mob-tabl-media-size) {
+                //left: calc((100vw - $mob-tabl-media-size)/ (-2));
+                position: absolute;
+                background-color: #fff;
+                content: "";
+                z-index: 20;
+                top: 0;
+                width: 100vw;
+                height: 100%;
+            }
+        }
         display: flex;
         justify-content: space-around;
         background-color: white;
@@ -11,6 +24,7 @@
         padding: 40px 56px;
 
         &__table {
+            z-index: 30;
             width: 30%;
             tr {
                 td {
@@ -34,6 +48,7 @@
             }
         }
         &__section {
+            z-index: 30;
             width: 60%;
             input[type="button"] {
                 border: none;
@@ -49,13 +64,19 @@
         position: relative;
         width: 100%;
         &__map {
-            width: 1120px;
+            width: 100%;
             height: 450px;
         }
         &__section {
             position: absolute;
             top: 10px;
             left: 10px;
+            &>form {
+                @media (max-width: $mob-tabl-media-size) {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
             &__addres {
                 margin-bottom: 10px;
                 &>label {

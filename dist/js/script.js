@@ -68,21 +68,48 @@ window.addEventListener('DOMContentLoaded', function () {
     const counterValue = document.querySelectorAll('.product__description__counter__item__value');
     const counterPlus = document.querySelectorAll('.product__description__counter__item__plus');
     const priceReal = document.querySelectorAll('.product__description__price__real__number');
-    const priceSale = document.querySelectorAll('.product__description__price__sale__number');
+
+
+    const priceSale = document.querySelectorAll('div.product__description__price.sale>.product__description__price__sale>.product__description__price__sale__number');
+
+
+
     const sumPrice = document.querySelector('.cart__summprice__price');
+    const finalypayRealAmount=document.querySelector('.cart__finalypay__table__realamount');
+    const finalypayAllAmount=document.querySelector('.cart__finalypay__table__allamount');
+    const finalypaySellAmount=document.querySelector('.cart__finalypay__table__sellamount');
+
+
 
     for (let i = 0; i < counterValue.length; i++) {
         let numPriceReal = Number(priceReal[i].textContent);
         let numPriceSale = Number(priceSale[i].textContent);
         let totalAmount = function () {
             priceReal[i].textContent = numPriceReal * counterValue[i].value;
+            
+            
             priceSale[i].textContent = numPriceSale * counterValue[i].value;
+
+
             let xxxxx = 0;
+            let yyyyy = 0;
             for (let k = 0; k < priceReal.length; k++) {
                 xxxxx += Number(priceReal[k].textContent);
             }
+            for (let j = 0; j < priceSale.length; j++) {
+                yyyyy += Number(priceSale[j].textContent);
+            }
             if (sumPrice) {
                 sumPrice.textContent = Number(xxxxx);
+            }
+            if (finalypayRealAmount) {
+                finalypayRealAmount.textContent= Number(xxxxx);
+            }
+            if (finalypayAllAmount) {
+                finalypayAllAmount.textContent=Number(yyyyy);
+            }
+            if (finalypaySellAmount) {
+                finalypaySellAmount.textContent=Number(yyyyy)-Number(xxxxx);
             }
         }
         totalAmount();
