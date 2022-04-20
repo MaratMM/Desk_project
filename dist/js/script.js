@@ -69,8 +69,9 @@ window.addEventListener('DOMContentLoaded', function () {
     const counterPlus = document.querySelectorAll('.product__description__counter__item__plus');
     const priceReal = document.querySelectorAll('.product__description__price__real__number');
 
+    const productDescriptionPrice=document.querySelectorAll('.product__description__price');
 
-    const priceSale = document.querySelectorAll('div.product__description__price.sale>.product__description__price__sale>.product__description__price__sale__number');
+    const priceSale = document.querySelectorAll('.product__description__price__sale__number');
 
 
 
@@ -80,13 +81,15 @@ window.addEventListener('DOMContentLoaded', function () {
     const finalypaySellAmount=document.querySelector('.cart__finalypay__table__sellamount');
 
 
-
     for (let i = 0; i < counterValue.length; i++) {
         let numPriceReal = Number(priceReal[i].textContent);
         let numPriceSale = Number(priceSale[i].textContent);
+        if (productDescriptionPrice[i].classList.contains('sale')) {
+            priceSale[i].classList.add('js-testing-priceSale');
+        }
+
         let totalAmount = function () {
             priceReal[i].textContent = numPriceReal * counterValue[i].value;
-            
             
             priceSale[i].textContent = numPriceSale * counterValue[i].value;
 
@@ -97,7 +100,12 @@ window.addEventListener('DOMContentLoaded', function () {
                 xxxxx += Number(priceReal[k].textContent);
             }
             for (let j = 0; j < priceSale.length; j++) {
-                yyyyy += Number(priceSale[j].textContent);
+                if (priceSale[j].classList.contains('js-testing-priceSale')) {
+                   yyyyy += Number(priceSale[j].textContent);
+                } else {
+                    yyyyy+= Number(priceReal[j].textContent);
+                }
+                 
             }
             if (sumPrice) {
                 sumPrice.textContent = Number(xxxxx);

@@ -13,9 +13,9 @@
 <div class="cart">
     <h1>Оформление заказа</h1>
     <h2>Мои товары</h2>
-    <table class="cart__list">
-        <tr class="cart__list__caption">
-            <th class="cart__list__caption__name">Товар</th>
+    <table class="cart__list list">
+        <tr class="cart__list__caption list__caption">
+            <th class="cart__list__caption__name list__caption-name">Товар</th>
             <th class="cart__list__caption__name">Количество</th>
             <th class="cart__list__caption__name">Стоимость</th>
         </tr>
@@ -32,7 +32,8 @@
             <td class="cart__list__item__counter">
                 <div class="product__description__counter">
                     <div class="product__description__counter__item">
-                        <div class="product__description__counter__item__minus"></div>
+                        <button type="button"
+                        class="product__description__counter__item__minus">-</button>
                         <input type="number" value="1" min="1" required
                             class="product__description__counter__item__value">
                         <div class="product__description__counter__item__plus"></div>
@@ -91,7 +92,7 @@
         <span class="cart__summprice__price"></span>
     </div>
     <h2>Адрес достави</h2>
-    <div class="cart__addresdestination">
+    <!-- <div class="cart__addresdestination">
         <iframe class="cart__addresdestination__map
         " src="https://yandex.ru/map-widget/v1/?um=constructor%3A998f7532dcafb9ef27c3b977b358889d09f1568944e2118822a6798005bb27d8&amp;source=constructor"
             frameborder="0"></iframe>
@@ -114,7 +115,7 @@
         <div class="cart__addresdestination__cdek">
             <img src="./img/Logo/cdek.png" alt="cdek_logo" class="cart__addresdestination__cdek__logo">
         </div>
-    </div>
+    </div> -->
     <div class="cart__finalypay">
         <table class="cart__finalypay__table">
             <tr>

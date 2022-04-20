@@ -66,6 +66,10 @@
         &__map {
             width: 100%;
             height: 450px;
+            @media (max-width: $mob-tabl-media-size) {
+                margin: 0 -10px;
+                width: calc(100% + 20px);
+            }
         }
         &__section {
             position: absolute;

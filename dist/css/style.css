@@ -1106,6 +1106,11 @@ li {
     height: 100%;
   }
 
+  .cart__addresdestination__map {
+    margin: 0 -10px;
+    width: calc(100% + 20px);
+  }
+
   .cart__addresdestination__section > form {
     width: 100%;
     -webkit-box-sizing: border-box;
