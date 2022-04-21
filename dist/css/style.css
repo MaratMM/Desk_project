@@ -152,6 +152,32 @@ li {
   background-repeat: no-repeat;
 }
 
+.icon_basket.js-notemptybasket {
+  position: relative;
+  text-decoration: none;
+}
+
+.icon_basket.js-notemptybasket .quantity-items {
+  position: absolute;
+  bottom: -13px;
+  right: -5px;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-size: 14px;
+  color: white;
+  width: 24px;
+  height: 24px;
+}
+
 .icon_burger {
   display: none;
 }

@@ -123,6 +123,24 @@ li {
     background-image: url('../img/sprite/line.svg');
     background-position: 2px 2px;
     background-repeat: no-repeat;
+    &.js-notemptybasket {
+        position: relative;
+        text-decoration: none;
+        .quantity-items {
+            position: absolute;
+            bottom: -13px;
+            right: -5px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 14px;
+            color: white;
+            width: 24px;
+            height: 24px;
+        }
+    }
 }
 .icon_burger {
     display: none;
