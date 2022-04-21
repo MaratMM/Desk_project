@@ -161,7 +161,7 @@ li {
   position: absolute;
   bottom: -13px;
   right: -5px;
-  background-color: green;
+  background-color: #2C9A7A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,7 +684,6 @@ li {
   display: flex;
   width: 136px;
   height: 56px;
-  background-color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -705,6 +704,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  border: none;
 }
 
 .product__description__counter__item__minus {
