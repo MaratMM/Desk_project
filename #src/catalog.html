@@ -7,15 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Gulp</title>
-    <style>
-        .navigation_link_catalog {
-            color: #828282;
-        }
-    </style>
 </head>
 
 <body>
-    @@include('_header.html')
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <div class="header_logo">
+                    <a href="./index.html"><img src="img/Logo/logo.png" class="" alt="Logo"></a>
+                    
+                </div>
+                <nav class="header_navigation">
+                    <ul class="navigation_list vip_menu">
+                        <li class="item_navigation navigation_link_catalog"><a href="./catalog.html" class="item_link">Каталог</a> </li>
+                        <li class="item_navigation"><a href="#" class="item_link">Команда</a></li>
+                        <li class="item_navigation"><a href="#" class="item_link">О нас</a></li>
+                        <li class="item_navigation">
+                            <div class="social_icons_menu">
+                                <ul>
+                                    <li class="icon_faceBook"><a href="#"></a></li>
+                                    <li class="icon_Inst"><a href="#"></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="div_icons">
+                    <ul class="top_header_icons">
+                        <li><a href="./cart.html" class="top_header_icon icon_basket js-notemptybasket">
+                            <div class="quantity-items">23</div>
+                        </a></li>
+                        <li class="top_header_icon icon_burger"></li>
+                    </ul>
+                </div>
+                <span class="btn_close_menu vip_menu"></span>
+            </div>
+        </div>
+    </header>
+    <div class="padding_for_header"></div>
 
     <div class="breadcrumbs">
         <ul class="breadcrumbs__list">
@@ -35,7 +64,7 @@
                     <span class="catalog__section__list__item__price">6_199 <span>₽</span><span class="catalog__section__list__item__price__sale">5999 <span>₽</span></span> </span>
                 </li>
                 <li class="catalog__section__list__item sale">
-                    <a href="#"><img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt=""></a>
+                    <a href="./productPageNotification.html"><img src="img/catalog_picture/background.png" class="catalog__section__list__item__picture" alt=""></a>
                     <span class="catalog__section__list__item__name">Столик_Fly</span>
                     <span class="catalog__section__list__item__price">6_199₽9999<span class="catalog__section__list__item__price__sale">599999<span>₽</span></span> </span>
                 </li>

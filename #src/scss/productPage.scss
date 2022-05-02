@@ -1,3 +1,39 @@
+.messagedaboutadmission {
+    &-button {
+        height: 48px;
+        border: none;
+    }
+    padding-left: 10px;
+    h4 {
+        margin-top: 10px;
+    }
+    background-color: white;
+    & * {
+        margin-bottom: 10px;
+    }
+    form {
+        label {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -7px;
+                left: 0;
+                content: '';
+                background-position: -142px -93px;
+                display: block;
+                background-repeat: no-repeat;
+                background-image: url('../img/sprite/line.svg');
+                width: 30px;
+                height: 30px;
+            }
+            input {
+                padding-left: 30px;
+                height: 40px;
+            } 
+        }
+    }
+}
+
 .product {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

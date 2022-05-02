@@ -54,6 +54,7 @@ $mob-tabl-media-size: 760px;
 @import "catalog";
 @import "productPage";
 @import "cart";
+@import "thankyou";
 
 //для хлебных крошек
 
@@ -96,4 +97,9 @@ $mob-tabl-media-size: 760px;
             }
         }
     }
+}
+//для хедера
+
+.navigation_link_catalog {
+    color: #828282;
 }

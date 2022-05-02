@@ -580,6 +580,46 @@ li {
   display: none;
 }
 
+.messagedaboutadmission {
+  padding-left: 10px;
+  background-color: white;
+}
+
+.messagedaboutadmission-button {
+  height: 48px;
+  border: none;
+}
+
+.messagedaboutadmission h4 {
+  margin-top: 10px;
+}
+
+.messagedaboutadmission * {
+  margin-bottom: 10px;
+}
+
+.messagedaboutadmission form label {
+  position: relative;
+}
+
+.messagedaboutadmission form label::before {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  content: "";
+  background-position: -142px -93px;
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url("../img/sprite/line.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.messagedaboutadmission form label input {
+  padding-left: 30px;
+  height: 40px;
+}
+
 .product {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1044,6 +1084,34 @@ li {
   font-size: 18px;
 }
 
+.thankyou {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.thankyou p {
+  font-size: 4vw;
+  text-align: center;
+}
+
+.thankyou a {
+  text-decoration: none;
+  color: black;
+}
+
 .breadcrumbs {
   max-width: 1120px;
   margin: 0 auto;
@@ -1091,6 +1159,10 @@ li {
 .breadcrumbs__list__item > a {
   text-decoration: none;
   color: #262F56;
+}
+
+.navigation_link_catalog {
+  color: #828282;
 }
 
 @media (min-width: 760px) {
