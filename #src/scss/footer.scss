@@ -124,8 +124,16 @@
 }
 .social_icons_menu {
     ul {
+        li a {
+            display: inline-block;
+            width: inherit;
+            height: inherit;
+        }
         @media (max-width: $mobile-media-size) {
             flex-direction: row;
         }
     }
+}
+input[type="email"]:focus {
+    outline: solid 1px lightblue;
 }

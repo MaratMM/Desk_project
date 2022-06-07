@@ -99,13 +99,17 @@
         <div class="cart__addresdestination__section">
             <form action="" class="cart__addresdestination__section__addres">
                 <label for="addresdestination">
-                    <input type="text" value="Казань" id="addresdestination">
+                    <select name="citys" id="addresdestination">
+                        <option value="kazan">Казань</option>
+                        <option value="peterburg">Петербург</option>
+                    </select>
+                    <!-- <input type="text" value="Казань" id="addresdestination"> -->
                 </label>
             </form>
             <form action="get" class="cart__addresdestination__section__deliverymethod">
                 <p>Выберите способ доставки</p>
                 <label for="courier">
-                    <input type="radio" name="deliverymethod" id="courier" value="courier" checked>Курьер, 2–3 дня, 610 ₽
+                    <input type="radio" name="deliverymethod" id="courier" value="courier">Курьер, 2–3 дня, 610 ₽
                 </label>
                 <label for="pickup">
                     <input type="radio" name="deliverymethod" id="pickup" value="pickup">Самовывоз, 5–6 дней, 1 050 ₽

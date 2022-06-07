@@ -349,6 +349,16 @@ li {
   font-weight: bold;
 }
 
+.social_icons_menu ul li a {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+
+input[type=email]:focus {
+  outline: solid 1px lightblue;
+}
+
 .main_page_content {
   max-width: 1024px;
   margin: 0 auto;
@@ -958,11 +968,23 @@ li {
   left: 10px;
 }
 
-.cart__addresdestination__section__addres > label input[id=addresdestination] {
+.cart__addresdestination__section__addres > label input[id=addresdestination],
+.cart__addresdestination__section__addres > label select[id=addresdestination] {
   border: none;
   font-size: 18px;
   padding-left: 50px;
   min-height: 56px;
+}
+
+.cart__addresdestination__section__addres > label input[id=addresdestination] option,
+.cart__addresdestination__section__addres > label select[id=addresdestination] option {
+  font-size: 14px;
+  padding: 0;
+}
+
+.cart__addresdestination__section__addres > label input[id=addresdestination]:focus,
+.cart__addresdestination__section__addres > label select[id=addresdestination]:focus {
+  outline: solid 1px lightblue;
 }
 
 .cart__addresdestination__section__deliverymethod {
@@ -988,12 +1010,13 @@ li {
   position: relative;
 }
 
-.cart__addresdestination__section__deliverymethod label > input {
+.cart__addresdestination__section__deliverymethod label > select {
   display: none;
 }
 
 .cart__addresdestination__section__deliverymethod label::before {
   position: absolute;
+  border-radius: 20%;
   content: "";
   width: 20px;
   height: 20px;
@@ -1057,7 +1080,15 @@ li {
   margin-left: 40px;
 }
 
+.cart__list__item__name__part a {
+  text-decoration: none;
+  color: black;
+}
+
 .cart__list__item__name__part__deletefrombasket {
+  cursor: pointer;
+  border: none;
+  background: rgba(0, 0, 0, 0);
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
